@@ -34,4 +34,3 @@ C:\Users\wesley_lopes\Desktop\Codigos_Cursos\Projeto_SalesWebMvc\Projeto_SalesWe
 C:\Users\wesley_lopes\Desktop\Codigos_Cursos\Projeto_SalesWebMvc\Projeto_SalesWebMvc\obj\Debug\netcoreapp2.1\Projeto_SalesWebMvc.pdb
 C:\Users\wesley_lopes\Desktop\Codigos_Cursos\Projeto_SalesWebMvc\Projeto_SalesWebMvc\obj\Debug\netcoreapp2.1\Projeto_SalesWebMvc.genruntimeconfig.cache
 C:\Users\wesley_lopes\Desktop\Codigos_Cursos\Projeto_SalesWebMvc\Projeto_SalesWebMvc\obj\Debug\netcoreapp2.1\Projeto_SalesWebMvc.csproj.CopyComplete
-C:\Users\wesley_lopes\Desktop\Codigos_Cursos\Projeto_SalesWebMvc\Projeto_SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Index.cshtml.g.cs

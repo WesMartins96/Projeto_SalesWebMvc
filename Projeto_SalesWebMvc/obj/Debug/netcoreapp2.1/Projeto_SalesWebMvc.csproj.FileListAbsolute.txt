@@ -41,3 +41,4 @@ C:\Users\wesley_lopes\Desktop\Codigos_Cursos\Projeto_SalesWebMvc\Projeto_SalesWe
 C:\Users\wesley_lopes\Desktop\Codigos_Cursos\Projeto_SalesWebMvc\Projeto_SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Index.cshtml.g.cs
 C:\Users\wesley_lopes\Desktop\Codigos_Cursos\Projeto_SalesWebMvc\Projeto_SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Index.cshtml.g.cs
 C:\Users\wesley_lopes\Desktop\Codigos_Cursos\Projeto_SalesWebMvc\Projeto_SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Create.cshtml.g.cs
+C:\Users\wesley_lopes\Desktop\Codigos_Cursos\Projeto_SalesWebMvc\Projeto_SalesWebMvc\obj\Debug\netcoreapp2.1\Razor\Views\Sellers\Delete.cshtml.g.cs

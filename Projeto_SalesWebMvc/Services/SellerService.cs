@@ -1,4 +1,5 @@
-﻿using Projeto_SalesWebMvc.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using Projeto_SalesWebMvc.Data;
 using Projeto_SalesWebMvc.Models;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,7 @@ namespace Projeto_SalesWebMvc.Services
 
         public Seller FindById(int id)
         {
-            return _context.Seller.FirstOrDefault(obj => obj.Id == id);
+            return _context.Seller.Include(obj => obj.Department).FirstOrDefault(obj => obj.Id == id);
         }
 
         public void Remove(int id)

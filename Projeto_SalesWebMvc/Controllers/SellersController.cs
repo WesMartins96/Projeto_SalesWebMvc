@@ -32,7 +32,7 @@ namespace Projeto_SalesWebMvc.Controllers
         public IActionResult Create()
         {
             var departments = _departmentService.FindAll();
-            var viewModel = new SallerFormViewModel { Departments = departments };
+            var viewModel = new SellerFormViewModel { Departments = departments };
 
             return View(viewModel);
         }
@@ -41,6 +41,14 @@ namespace Projeto_SalesWebMvc.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Seller seller)
         {
+            //validação para caso javascript estiver desabilitado, corrigindo possivel inserção indesejada
+            if (!ModelState.IsValid)
+            {
+                var departments = _departmentService.FindAll();
+                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
+                return View(viewModel);
+            }
+
             _sellerService.Insert(seller);
             return RedirectToAction(nameof(Index));
         }
@@ -101,7 +109,7 @@ namespace Projeto_SalesWebMvc.Controllers
             }
 
             List<Department> departments = _departmentService.FindAll();
-            SallerFormViewModel viewModel = new SallerFormViewModel { Seller = obj, Departments = departments };
+            SellerFormViewModel viewModel = new SellerFormViewModel { Seller = obj, Departments = departments };
 
             return View(viewModel);
         }
@@ -110,6 +118,14 @@ namespace Projeto_SalesWebMvc.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Seller seller)
         {
+            //validação para caso javascript estiver desabilitado, corrigindo possivel inserção indesejada
+            if (!ModelState.IsValid)
+            {
+                var departments = _departmentService.FindAll();
+                var viewModel = new SellerFormViewModel { Seller = seller, Departments = departments };
+                return View(viewModel);
+            }
+
             if (id != seller.Id)
             {
                 return RedirectToAction(nameof(Error), new { message = "Id não corresponde" });
@@ -136,6 +152,8 @@ namespace Projeto_SalesWebMvc.Controllers
             return View(viewModel);
 
         }
+
+        
 
     }
 }

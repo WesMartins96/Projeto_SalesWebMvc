@@ -11,19 +11,24 @@ namespace Projeto_SalesWebMvc.Models
         public int Id { get; set; }
 
         [Display(Name = "Nome")]
+        [Required(ErrorMessage = "{0} obrigatório")]
         public string Name { get; set; }
 
         [Display(Name = "E-Mail")]
         [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "{0} obrigatório")]
+        [EmailAddress(ErrorMessage = "Digite um email corretamente")]
         public string Email { get; set; }
 
         [Display(Name = "Data de Nascimento")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [Required(ErrorMessage = "{0} obrigatório")]
         public DateTime BirthDate { get; set; }
 
         [Display(Name = "Salário")]
         [DisplayFormat(DataFormatString = "{0:F2}")]
+        [Required(ErrorMessage = "{0} obrigatório")]
         public double BaseSalary { get; set; }
 
         [Display(Name = "Departamento")]

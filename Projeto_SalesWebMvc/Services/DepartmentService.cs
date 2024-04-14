@@ -1,4 +1,5 @@
-﻿using Projeto_SalesWebMvc.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using Projeto_SalesWebMvc.Data;
 using Projeto_SalesWebMvc.Models;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,12 @@ namespace Projeto_SalesWebMvc.Services
             _context = context;
         }
 
-        public List<Department> FindAll()
+        public async Task<List<Department>> FindAllAsync()
         {
-            return _context.Department.OrderBy(x => x.Name).ToList();
+            return await _context.Department.OrderBy(x => x.Name).ToListAsync();
         }
+
+
 
 
     }
